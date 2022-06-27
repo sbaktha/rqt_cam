@@ -76,7 +76,6 @@ It also provides UI for changing V4l2 controls and to switch Color space/Compres
 #### MIPI camera
 	* e-CAM130_CUXVR
 
-
 ## Prerequisites
 
 - For Ubuntu 16.04 [ROS Kinetic](http://wiki.ros.org/kinetic/Installation/Ubuntu)
@@ -97,6 +96,11 @@ It also provides UI for changing V4l2 controls and to switch Color space/Compres
 ## Release
 
 * rqt_cam v1.0.0		-	20-Jan-2020
+
+## Edits 
+- Added support for GMSL camera as v4l2 camera
+- Added node for direct ROS image message publisher instead of eCon Image message format used in rqt_cam application
+- Added launch modalities for multiple GMSL cameras in Ser-Deser board on Jetson 
 
 ## Support
 
