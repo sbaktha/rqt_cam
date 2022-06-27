@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="num" default="1"/>
+    <group ns="$(eval 'node' + str(arg('num')))">
+        <node pkg="ecam_v4l2" type="img_pub_node" name="camera1_node" args="num"/>
+    </group>
+
+    <include file="$(find ecam_v4l2/launch/multi_cam.launch"
+    if="$(eval arg('num') - 1 > 0)">
+        <arg name="num" value="$(eval arg('num') - 1)"/>
+    </include>
+
+</launch>
